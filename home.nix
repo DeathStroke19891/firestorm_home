@@ -168,7 +168,7 @@ in
 
   programs.eww = {
     enable = true;
-    configDir = ./eww;
+    configDir = ./filthy;
   };
 
   xdg.enable = true;
