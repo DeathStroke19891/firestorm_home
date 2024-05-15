@@ -1,6 +1,8 @@
-{ pkgs, config, ...}:
-
 {
+  pkgs,
+  config,
+  ...
+}: {
   systemd.user.services.hyprshade = {
     Unit = {
       Description = "Apply screen filter";
@@ -22,7 +24,7 @@
       ];
     };
     Install = {
-      WantedBy = [ "timers.target" ];
+      WantedBy = ["timers.target"];
     };
   };
 

@@ -1,6 +1,8 @@
-{ pkgs, config, ... }:
-
 {
+  pkgs,
+  config,
+  ...
+}: {
   programs.alacritty = {
     enable = true;
     settings = {
@@ -35,7 +37,7 @@
           y = 3;
         };
       };
-      
+
       colors = with config.colorScheme.palette; {
         primary = {
           background = "0x${base00}";
@@ -109,8 +111,8 @@
           blue = "0x${base0D}";
           red = "0x${base08}";
           cyan = "0x${base0C}";
-        white = "#bac2de";
-       };
+          white = "#bac2de";
+        };
       };
     };
   };

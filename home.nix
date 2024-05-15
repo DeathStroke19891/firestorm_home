@@ -1,9 +1,12 @@
-{ config, pkgs, stable-pkgs, inputs, ... }:
-let
-  candy = import ./candy.nix { inherit pkgs; };
-in
 {
-
+  config,
+  pkgs,
+  stable-pkgs,
+  inputs,
+  ...
+}: let
+  candy = import ./candy.nix {inherit pkgs;};
+in {
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
 
   imports = [
@@ -40,8 +43,8 @@ in
   home.username = "parzival";
   home.homeDirectory = "/home/parzival";
 
-  home.stateVersion = "23.11"; 
-  
+  home.stateVersion = "23.11";
+
   fonts.fontconfig.enable = true;
 
   home.packages = with pkgs; [
@@ -53,7 +56,6 @@ in
     stable-pkgs.steamPackages.steamcmd
     inputs.steam-tui.packages."${pkgs.system}".steam-tui
     floorp
-    protonvpn-cli
     alejandra
     pika-backup
     grimblast
@@ -97,7 +99,7 @@ in
     cinnamon.nemo-with-extensions
     texliveFull
     noto-fonts-emoji
-    (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "Monaspace" "Mononoki"]; })
+    (nerdfonts.override {fonts = ["FiraCode" "DroidSansMono" "Monaspace" "Mononoki"];})
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -141,7 +143,7 @@ in
     };
     oh-my-zsh = {
       enable = true;
-      plugins = [ "sudo" "git" "zoxide" "colored-man-pages" "ripgrep" "systemd"];
+      plugins = ["sudo" "git" "zoxide" "colored-man-pages" "ripgrep" "systemd"];
       theme = "alanpeabody";
     };
     plugins = [
@@ -152,10 +154,10 @@ in
       }
     ];
     initExtra = ''
-	   source ~/.p10k.zsh
-   ''; 
+      source ~/.p10k.zsh
+    '';
   };
-  
+
   programs.eza = {
     enable = true;
     enableZshIntegration = true;
@@ -173,7 +175,7 @@ in
 
   xdg.enable = true;
 
-  qt= {
+  qt = {
     enable = true;
     platformTheme.name = "qtct";
     style = {

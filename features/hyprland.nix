@@ -1,12 +1,16 @@
-{ pkgs, config, inputs, ...}:
-let
+{
+  pkgs,
+  config,
+  inputs,
+  ...
+}: let
   startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
     # ${pkgs.eww}/bin/eww daemon &
     # ${pkgs.eww}/bin/eww open bar &
 
     ${pkgs.emacs} --init-directory $HOME/.config/emacs --daemon
     ${pkgs.swww}/bin/swww init &
-  
+
     ${pkgs.mako}/bin/mako &
 
     ${pkgs.udiskie}/bin/udiskie &
@@ -18,13 +22,11 @@ let
     ${pkgs.dbus}/bin/dbus-update-activation-environment --systemd HYPRLAND_INSTANCE_SIGNATURE
     ${pkgs.hyprland}/bin/hyprctl setcursor Bibata-Modern-Classic 24
   '';
-in
-{
-
+in {
   wayland.windowManager.hyprland = {
     enable = true;
     package = inputs.hyprland.packages."${pkgs.system}".hyprland;
-    
+
     settings = {
       monitor = ",1920x1080@60, auto, 1";
 
@@ -63,7 +65,7 @@ in
 
         sensitivity = 0;
       };
-     
+
       general = with config.colorScheme.palette; {
         gaps_in = 5;
         gaps_out = 15;
@@ -72,7 +74,7 @@ in
         "col.inactive_border" = "rgba(${base00}ff)";
         layout = "dwindle";
       };
-     
+
       decoration = {
         rounding = 15;
         active_opacity = 1.0;
@@ -96,7 +98,7 @@ in
           "lockscreen"
         ];
       };
-      
+
       animations = {
         enabled = "yes";
         bezier = [
@@ -116,7 +118,7 @@ in
           "workspaces, 1, 5, wind"
         ];
       };
-   
+
       dwindle = {
         no_gaps_when_only = false;
         pseudotile = true;
@@ -131,12 +133,12 @@ in
         always_center_master = false;
         mfact = 0.50;
       };
- 
+
       gestures = {
         workspace_swipe = "on";
         workspace_swipe_forever = true;
       };
- 
+
       misc = {
         enable_swallow = true;
         new_window_takes_over_fullscreen = 2;
@@ -203,7 +205,6 @@ in
         "$mainMod, SPACE, layoutmsg, orientationnext"
         "$mainMod_SHIFT, SPACE, layoutmsg, orientationprev"
 
-
         "$mainMod, P, pseudo,"
         "$mainMod, T, togglesplit,"
 
@@ -241,12 +242,12 @@ in
         "$mainMod_SUPER_SHIFT, Tab, changegroupactive, b"
       ];
 
-     bindm = [
-       "$mainMod, mouse:272, movewindow"
-       "$mainMod, mouse:273, resizewindow"
-     ];
+      bindm = [
+        "$mainMod, mouse:272, movewindow"
+        "$mainMod, mouse:273, resizewindow"
+      ];
 
-     bindl =",switch:on:Lid Switch, exec, hyprlock";
+      bindl = ",switch:on:Lid Switch, exec, hyprlock";
     };
   };
 }

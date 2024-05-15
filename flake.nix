@@ -18,23 +18,39 @@
     steam-tui.url = "github:dmadisetti/steam-tui";
   };
 
-  outputs = { nixpkgs, nixpkgs-stable , home-manager, nix-index-database, catppuccin, ... }@inputs:
-    let
-      system = "x86_64-linux";
-      pkgs = import nixpkgs { system = system; config.allowUnfree = true; overlays = [ inputs.nur.overlay ];  };
-      stable-pkgs = import nixpkgs-stable { system = system; config.allowUnfree = true; };
-    in {
-      homeConfigurations."parzival" = home-manager.lib.homeManagerConfiguration {
-	      inherit pkgs;
-	      extraSpecialArgs = { inherit inputs; inherit stable-pkgs; };
-
-        # Specify your home configuration modules here, for example,
-        # the path to your home.nix.
-        modules = [
-          ./home.nix 
-          nix-index-database.hmModules.nix-index
-          catppuccin.homeManagerModules.catppuccin
-        ];
-      };
+  outputs = {
+    nixpkgs,
+    nixpkgs-stable,
+    home-manager,
+    nix-index-database,
+    catppuccin,
+    ...
+  } @ inputs: let
+    system = "x86_64-linux";
+    pkgs = import nixpkgs {
+      system = system;
+      config.allowUnfree = true;
+      overlays = [inputs.nur.overlay];
     };
+    stable-pkgs = import nixpkgs-stable {
+      system = system;
+      config.allowUnfree = true;
+    };
+  in {
+    homeConfigurations."parzival" = home-manager.lib.homeManagerConfiguration {
+      inherit pkgs;
+      extraSpecialArgs = {
+        inherit inputs;
+        inherit stable-pkgs;
+      };
+
+      # Specify your home configuration modules here, for example,
+      # the path to your home.nix.
+      modules = [
+        ./home.nix
+        nix-index-database.hmModules.nix-index
+        catppuccin.homeManagerModules.catppuccin
+      ];
+    };
+  };
 }

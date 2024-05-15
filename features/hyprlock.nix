@@ -1,6 +1,8 @@
-{ pkgs, config, ... }:
-
 {
+  pkgs,
+  config,
+  ...
+}: {
   home.file = {
     ".config/hypr/hyprlock.conf".text = ''
       background {

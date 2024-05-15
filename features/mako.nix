@@ -1,6 +1,8 @@
-{ pkgs, config, ...}:
-
 {
+  pkgs,
+  config,
+  ...
+}: {
   services.mako = {
     enable = true;
     backgroundColor = "#${config.colorScheme.palette.base01}";
