@@ -128,7 +128,7 @@ in {
 
   services.gpg-agent = {
     enable = true;
-    # enableZshIntegration = true;
+    enableZshIntegration = true;
     pinentryPackage = pkgs.pinentry-qt;
   };
 
@@ -144,7 +144,7 @@ in {
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
-    autocd = true;
+
     shellAliases = {
       ll = "eza -l";
       update = "sudo nixos-rebuild switch --flake ~/flake_firestorm/";
@@ -153,11 +153,12 @@ in {
       ls = "eza";
       rm = "trash -c always put";
     };
+
     oh-my-zsh = {
       enable = true;
-      plugins = ["sudo" "git" "zoxide" "colored-man-pages" "ripgrep" "systemd"];
-      theme = "alanpeabody";
+      plugins = ["sudo" "colored-man-pages"];
     };
+
     plugins = [
       {
         name = "powerlevel10k";
@@ -165,8 +166,20 @@ in {
         file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
       }
     ];
+
+    history = {
+      expireDuplicatesFirst = true;
+      share = true;
+      ignoreSpace = true;
+      ignoreDups = true;
+      ignoreAllDups = true;
+    };
+
     initExtra = ''
       source ~/.p10k.zsh
+      bindkey -e
+      bindkey '^p' history-search-backward
+      bindkey '^n' history-search-forward
     '';
   };
 
@@ -177,7 +190,7 @@ in {
 
   programs.zoxide = {
     enable = true;
-    # enableZshIntegration = true;
+    enableZshIntegration = true;
   };
 
   programs.eww = {
