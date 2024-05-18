@@ -201,6 +201,11 @@ in {
     enableZshIntegration = true;
   };
 
+  programs.fzf = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
   programs.eww = {
     enable = true;
     configDir = ./filthy;
