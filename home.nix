@@ -64,7 +64,6 @@ in {
     thunderbird
     pika-backup
 
-    zinit
     grimblast
     mako
     wf-recorder
@@ -141,33 +140,34 @@ in {
 
   programs.zsh = {
     enable = true;
-    # enableCompletion = true;
-    # autosuggestion.enable = true;
-    # syntaxHighlighting.enable = true;
-    # autocd = true;
-    # shellAliases = {
-    #   ll = "eza -l";
-    #   update = "sudo nixos-rebuild switch --flake ~/flake_firestorm/";
-    #   home-update = "home-manager switch";
-    #   cd = "z";
-    #   ls = "eza";
-    #   rm = "trash -c always put";
-    # };
-    # oh-my-zsh = {
-    #   enable = true;
-    #   plugins = ["sudo" "git" "zoxide" "colored-man-pages" "ripgrep" "systemd"];
-    #   theme = "alanpeabody";
-    # };
-    # plugins = [
-    #   {
-    #     name = "powerlevel10k";
-    #     src = pkgs.zsh-powerlevel10k;
-    #     file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
-    #   }
-    # ];
-    # initExtra = ''
-    #   source ~/.p10k.zsh
-    # '';
+
+    enableCompletion = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
+    autocd = true;
+    shellAliases = {
+      ll = "eza -l";
+      update = "sudo nixos-rebuild switch --flake ~/flake_firestorm/";
+      home-update = "home-manager switch";
+      cd = "z";
+      ls = "eza";
+      rm = "trash -c always put";
+    };
+    oh-my-zsh = {
+      enable = true;
+      plugins = ["sudo" "git" "zoxide" "colored-man-pages" "ripgrep" "systemd"];
+      theme = "alanpeabody";
+    };
+    plugins = [
+      {
+        name = "powerlevel10k";
+        src = pkgs.zsh-powerlevel10k;
+        file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+      }
+    ];
+    initExtra = ''
+      source ~/.p10k.zsh
+    '';
   };
 
   programs.eza = {
