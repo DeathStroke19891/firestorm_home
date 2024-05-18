@@ -82,8 +82,10 @@ in {
     cava
     hyprpicker
     mpv
+
     ripgrep
     fd
+    zsh-fzf-tab
 
     pass-wayland
     gnupg
@@ -181,6 +183,7 @@ in {
       setopt HIST_SAVE_NO_DUPS
 
       source ~/.p10k.zsh
+      source ${pkgs.zsh-fzf-tab}/share/fzf-tab/fzf-tab.plugin.zsh
 
       bindkey -e
       bindkey '^p' history-search-backward
@@ -188,6 +191,9 @@ in {
 
       zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
       zstyle ':completion:*' list-colors "''${(s.:.)LS_COLORS}"
+      zstyle ':completion:*' menu no
+      zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa $realpath'
+      zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'exa $realpath'
     '';
   };
 
