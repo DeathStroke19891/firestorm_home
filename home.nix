@@ -129,10 +129,10 @@ in {
 
   programs.zsh = {
     enable = true;
-    enableCompletion = true;
-    autosuggestion.enable = true;
-    syntaxHighlighting.enable = true;
-    autocd = true;
+    # enableCompletion = true;
+    # autosuggestion.enable = true;
+    # syntaxHighlighting.enable = true;
+    # autocd = true;
     shellAliases = {
       ll = "eza -l";
       update = "sudo nixos-rebuild switch --flake ~/flake_firestorm/";
@@ -141,11 +141,11 @@ in {
       ls = "eza";
       rm = "trash -c always put";
     };
-    oh-my-zsh = {
-      enable = true;
-      plugins = ["sudo" "git" "zoxide" "colored-man-pages" "ripgrep" "systemd"];
-      theme = "alanpeabody";
-    };
+    # oh-my-zsh = {
+    #   enable = true;
+    #   plugins = ["sudo" "git" "zoxide" "colored-man-pages" "ripgrep" "systemd"];
+    #   theme = "alanpeabody";
+    # };
     plugins = [
       {
         name = "powerlevel10k";
