@@ -31,7 +31,7 @@ in {
             "rightalt" = "rightmeta";
             CapsLock = {
               held = "leftctrl";
-              alone = "esc";
+              alone = "capslock";
               alone_timeout_millis = 150;
             };
           };
