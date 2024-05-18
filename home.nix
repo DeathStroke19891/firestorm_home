@@ -144,6 +144,7 @@ in {
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
+    defaultKeymap = "emacs";
 
     shellAliases = {
       ll = "eza -l";
@@ -168,7 +169,6 @@ in {
     ];
 
     history = {
-      expireDuplicatesFirst = true;
       share = true;
       ignoreSpace = true;
       ignoreDups = true;
@@ -176,10 +176,18 @@ in {
     };
 
     initExtra = ''
+      HISTDUP=erase
+      setopt HIST_FIND_NO_DUPS
+      setopt HIST_SAVE_NO_DUPS
+
       source ~/.p10k.zsh
+
       bindkey -e
       bindkey '^p' history-search-backward
       bindkey '^n' history-search-forward
+
+      zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+      zstyle ':completion:*' list-colors "$\{(s.:.)LS_COLORS}"
     '';
   };
 
