@@ -48,56 +48,68 @@ in {
   fonts.fontconfig.enable = true;
 
   home.packages = with pkgs; [
-    lf
     sioyek
+
     nur.repos.nltch.spotify-adblock
+
     stable-pkgs.steam
     stable-pkgs.steam-run
     stable-pkgs.steamPackages.steamcmd
     inputs.steam-tui.packages."${pkgs.system}".steam-tui
-    floorp
+
     alejandra
+
+    floorp
+    firefox-devedition
+    thunderbird
     pika-backup
+
+    zinit
     grimblast
     mako
     wf-recorder
     rofi-wayland
     wl-clipboard
-    firefox-devedition
-    thunderbird
     swww
     pulsemixer
     fastfetch
     hyprcursor
     trashy
-    pass-wayland
-    gnupg
-    pinentry-qt
-    calibre
     viewnior
-    libreoffice-fresh
-    libqalculate
     hypridle
     hyprlock
-    jq
-    socat
-    hck
     udiskie
-    emacs
-    neovim
     bottom
-    catppuccin-qt5ct
     cava
     hyprpicker
     mpv
+    ripgrep
+    fd
+
+    pass-wayland
+    gnupg
+    pinentry-qt
+
+    calibre
+    libreoffice-fresh
+    libqalculate
     transmission-qt
     gimp
+
+    jq
+    socat
+    hck
+
+    emacs
+    neovim
     obsidian
-    ripgrep
     zed-editor
-    fd
+
+    catppuccin-qt5ct
     cinnamon.nemo-with-extensions
+
     texliveFull
+
     noto-fonts-emoji
     (nerdfonts.override {fonts = ["FiraCode" "DroidSansMono" "Monaspace" "Mononoki"];})
 
