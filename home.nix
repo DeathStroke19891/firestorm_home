@@ -129,7 +129,7 @@ in {
 
   services.gpg-agent = {
     enable = true;
-    enableZshIntegration = true;
+    # enableZshIntegration = true;
     pinentryPackage = pkgs.pinentry-qt;
   };
 
@@ -145,29 +145,29 @@ in {
     # autosuggestion.enable = true;
     # syntaxHighlighting.enable = true;
     # autocd = true;
-    shellAliases = {
-      ll = "eza -l";
-      update = "sudo nixos-rebuild switch --flake ~/flake_firestorm/";
-      home-update = "home-manager switch";
-      cd = "z";
-      ls = "eza";
-      rm = "trash -c always put";
-    };
+    # shellAliases = {
+    #   ll = "eza -l";
+    #   update = "sudo nixos-rebuild switch --flake ~/flake_firestorm/";
+    #   home-update = "home-manager switch";
+    #   cd = "z";
+    #   ls = "eza";
+    #   rm = "trash -c always put";
+    # };
     # oh-my-zsh = {
     #   enable = true;
     #   plugins = ["sudo" "git" "zoxide" "colored-man-pages" "ripgrep" "systemd"];
     #   theme = "alanpeabody";
     # };
-    plugins = [
-      {
-        name = "powerlevel10k";
-        src = pkgs.zsh-powerlevel10k;
-        file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
-      }
-    ];
-    initExtra = ''
-      source ~/.p10k.zsh
-    '';
+    # plugins = [
+    #   {
+    #     name = "powerlevel10k";
+    #     src = pkgs.zsh-powerlevel10k;
+    #     file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+    #   }
+    # ];
+    # initExtra = ''
+    #   source ~/.p10k.zsh
+    # '';
   };
 
   programs.eza = {
@@ -177,7 +177,7 @@ in {
 
   programs.zoxide = {
     enable = true;
-    enableZshIntegration = true;
+    # enableZshIntegration = true;
   };
 
   programs.eww = {
