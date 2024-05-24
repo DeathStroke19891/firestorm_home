@@ -13,7 +13,6 @@
     nix-colors.url = "github:misterio77/nix-colors";
     nix-index-database.url = "github:nix-community/nix-index-database";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
-    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     xremap-flake.url = "github:xremap/nix-flake";
     steam-tui.url = "github:dmadisetti/steam-tui";
   };

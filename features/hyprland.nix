@@ -25,7 +25,7 @@
 in {
   wayland.windowManager.hyprland = {
     enable = true;
-    package = inputs.hyprland.packages."${pkgs.system}".hyprland;
+    package = pkgs.hyprland;
 
     settings = {
       monitor = ",1920x1080@60, auto, 1";
