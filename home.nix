@@ -50,12 +50,12 @@ in {
   home.packages = with pkgs; [
     sioyek
 
-    nur.repos.nltch.spotify-adblock
+    # nur.repos.nltch.spotify-adblock
 
-    stable-pkgs.steam
-    stable-pkgs.steam-run
-    stable-pkgs.steamPackages.steamcmd
-    inputs.steam-tui.packages."${pkgs.system}".steam-tui
+    # stable-pkgs.steam
+    # stable-pkgs.steam-run
+    # stable-pkgs.steamPackages.steamcmd
+    # inputs.steam-tui.packages."${pkgs.system}".steam-tui
 
     alejandra
 
@@ -228,7 +228,7 @@ in {
     };
   };
 
-  catppuccin.flavour = "mocha";
+  catppuccin.flavor = "mocha";
 
   gtk = {
     enable = true;
