@@ -94,7 +94,7 @@ in {
     calibre
     libreoffice-fresh
     libqalculate
-    transmission-qt
+    # transmission-qt
     gimp
 
     jq
