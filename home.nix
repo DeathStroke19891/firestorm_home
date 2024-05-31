@@ -85,6 +85,7 @@ in {
 
     ripgrep
     fd
+    sl
     zsh-fzf-tab
 
     pass-wayland
