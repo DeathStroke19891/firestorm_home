@@ -107,6 +107,8 @@ in {
     obsidian
     zed-editor
 
+    enchant
+
     catppuccin-qt5ct
     cinnamon.nemo-with-extensions
 
