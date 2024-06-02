@@ -108,7 +108,6 @@ in {
     zed-editor
 
     enchant
-    nodejs_22
 
     catppuccin-qt5ct
     cinnamon.nemo-with-extensions
