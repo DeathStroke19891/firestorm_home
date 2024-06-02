@@ -109,6 +109,8 @@ in {
 
     enchant
     nodejs_22
+    pyright
+    clang-tools
 
     catppuccin-qt5ct
     cinnamon.nemo-with-extensions
