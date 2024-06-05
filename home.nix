@@ -92,6 +92,7 @@ in {
     gnupg
     pinentry-qt
     at
+    (import ./derivations/alarm.nix {inherit pkgs;})
 
     calibre
     libreoffice-fresh
