@@ -1,5 +1,5 @@
 {pkgs}:
 pkgs.writeShellScriptBin "alarm" ''
   set -e
-  echo "mpv ~/downloads/alarm.mp3" | at $1
+  echo 'mpv ~/downloads/alarm.mp3' | at $1
 ''
