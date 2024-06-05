@@ -91,11 +91,12 @@ in {
     pass-wayland
     gnupg
     pinentry-qt
+    at
 
     calibre
     libreoffice-fresh
     libqalculate
-    # transmission-qt
+    transmission-qt
     gimp
 
     jq
