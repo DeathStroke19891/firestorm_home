@@ -99,6 +99,8 @@ in {
     libqalculate
     transmission-qt
     gimp
+    morgen
+    planify
 
     jq
     socat
