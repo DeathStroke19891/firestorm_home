@@ -101,6 +101,7 @@ in {
     gimp
     morgen
     planify
+    foliate
 
     jq
     socat
