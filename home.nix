@@ -9,6 +9,10 @@
 in {
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
 
+  nixpkgs.overlays = [
+    inputs.nur.overlay
+  ];
+
   imports = [
     inputs.nix-colors.homeManagerModules.default
     inputs.xremap-flake.homeManagerModules.default
