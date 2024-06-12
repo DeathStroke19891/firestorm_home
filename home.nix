@@ -54,7 +54,7 @@ in {
   home.packages = with pkgs; [
     sioyek
 
-    # nur.repos.nltch.spotify-adblock
+    nur.repos.nltch.spotify-adblock
 
     # stable-pkgs.steam
     # stable-pkgs.steam-run
