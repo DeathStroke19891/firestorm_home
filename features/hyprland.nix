@@ -5,9 +5,6 @@
   ...
 }: let
   startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
-    # ${pkgs.eww}/bin/eww daemon &
-    # ${pkgs.eww}/bin/eww open bar &
-
     ${pkgs.emacs} --init-directory $HOME/.config/emacs --daemon
     ${pkgs.swww}/bin/swww init &
 
@@ -47,6 +44,8 @@ in {
         "[workspace special:doom silent] emacs"
         "[workspace special:calc silent] alacritty -e qalc"
         "[workspace special:torrent silent] transmission-qt"
+        "[workspace special:morgen silent] morgen"
+        "[workspace special:plan silent] planify"
       ];
 
       exec = "hyprshade auto";
@@ -186,10 +185,12 @@ in {
         "$mainMod_CTRL, S, togglespecialworkspace, spot"
         "$mainMod_CTRL, O, togglespecialworkspace, torrent"
         "$mainMod_CTRL, R, togglespecialworkspace, random"
+        "$mainMod_CTRL, M, togglespecialworkspace, morgen"
+        "$mainMod_CTRL, P, togglespecialworkspace, planify"
 
         "$mainMod, M, fullscreen, 1"
         "$mainMod_SHIFT, M, fullscreen"
-        "$mainMod_CTRL, M, fakefullscreen"
+        "$mainMod_SHIFT_CTRL, M, fakefullscreen"
 
         "$mainMod_CTRL, H, resizeactive, -20 0"
         "$mainMod_CTRL, L, resizeactive, 20 0"
