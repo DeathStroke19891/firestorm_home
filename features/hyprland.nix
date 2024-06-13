@@ -185,8 +185,7 @@ in {
         "$mainMod_CTRL, S, togglespecialworkspace, spot"
         "$mainMod_CTRL, O, togglespecialworkspace, torrent"
         "$mainMod_CTRL, R, togglespecialworkspace, random"
-        "$mainMod_CTRL, M, togglespecialworkspace, morgen"
-        "$mainMod_CTRL, P, togglespecialworkspace, planify"
+        "$mainMod_CTRL, P, togglespecialworkspace, io.github.alainm23.planify"
 
         "$mainMod, M, fullscreen, 1"
         "$mainMod_SHIFT, M, fullscreen"

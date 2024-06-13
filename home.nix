@@ -103,7 +103,6 @@ in {
     libqalculate
     transmission-qt
     gimp
-    morgen
     planify
     foliate
 
