@@ -97,6 +97,7 @@ in {
     pinentry-qt
     at
     (import ./derivations/alarm.nix {inherit pkgs;})
+    (import ./derivations/pass.nix {inherit pkgs;})
 
     calibre
     libreoffice-fresh

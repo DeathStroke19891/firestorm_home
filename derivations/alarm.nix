@@ -1,5 +1,5 @@
 {pkgs}:
 pkgs.writeShellScriptBin "alarm" ''
   set -e
-  echo 'mpv ~/downloads/alarm.mp3' | at $@
+  echo '${pkgs.mpv} ~/downloads/alarm.mp3' | ${pkgs.at} $@
 ''
