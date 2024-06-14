@@ -72,6 +72,7 @@ in {
     (import ./derivations/screenshot.nix {inherit pkgs;})
     mako
     wf-recorder
+    (import ./derivations/recorder.nix {inherit pkgs;})
     rofi-wayland
     wl-clipboard
     swww
