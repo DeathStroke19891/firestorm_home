@@ -155,7 +155,7 @@ in {
         "$mainMod, R, exec, rofi -show drun"
         "$mainMod, S, exec, sioyek"
         "$mainMod, Z, exec, zathura"
-        "$mainMod SHIFT, P, exec, $HOME/shell-scripts/pass.sh"
+        "$mainMod SHIFT, P, exec, pass-show"
 
         ", XF86MonBrightnessUp, exec,light -A 5"
         ", XF86MonBrightnessDown, exec, light -U 5"
