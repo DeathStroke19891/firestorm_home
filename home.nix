@@ -69,6 +69,7 @@ in {
     pika-backup
 
     grimblast
+    (import ./derivations/screenshot.nix {inherit pkgs;})
     mako
     wf-recorder
     rofi-wayland
@@ -95,10 +96,10 @@ in {
     pass-wayland
     gnupg
     pinentry-qt
+    (import ./derivations/pass.nix {inherit pkgs;})
+
     at
     (import ./derivations/alarm.nix {inherit pkgs;})
-    (import ./derivations/pass.nix {inherit pkgs;})
-    (import ./derivations/screenshot.nix {inherit pkgs;})
 
     calibre
     libreoffice-fresh
