@@ -98,6 +98,7 @@ in {
     at
     (import ./derivations/alarm.nix {inherit pkgs;})
     (import ./derivations/pass.nix {inherit pkgs;})
+    (import ./derivations/screenshot.nix {inherit pkgs;})
 
     calibre
     libreoffice-fresh
