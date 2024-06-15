@@ -161,6 +161,9 @@ in {
       lg2 = "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'";
       lg = "lg2";
     };
+    delta = {
+      enable = true;
+    };
   };
 
   programs.zsh = {
@@ -228,6 +231,10 @@ in {
   programs.zoxide = {
     enable = true;
     enableZshIntegration = true;
+  };
+
+  programs.bat = {
+    enable = true;
   };
 
   programs.fzf = {
