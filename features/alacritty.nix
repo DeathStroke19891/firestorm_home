@@ -30,12 +30,14 @@
       };
 
       window = {
-        opacity = 0.5;
+        opacity = 0.8;
 
         padding = {
-          x = 5;
-          y = 3;
+          x = 10;
+          y = 10;
         };
+
+        blur = true;
       };
 
       colors = with config.colorScheme.palette; {
