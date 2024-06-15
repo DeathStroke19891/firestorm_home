@@ -164,6 +164,20 @@ in {
     delta = {
       enable = true;
     };
+    extraConfig = {
+      delta = {
+        navigate = true;
+        line-numbers = true;
+        side-by-side = true;
+        syntax-highlighting = true;
+      };
+      merge = {
+        conflictstyle = "diff3";
+      };
+      diff = {
+        colorMoved = "default";
+      };
+    };
   };
 
   programs.zsh = {
