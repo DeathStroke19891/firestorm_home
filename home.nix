@@ -94,6 +94,8 @@ in {
     tlrc
     sl
     zsh-fzf-tab
+    copyq
+    pstree
 
     pass-wayland
     gnupg
@@ -256,6 +258,59 @@ in {
   programs.fzf = {
     enable = true;
     enableZshIntegration = true;
+    tmux = {
+      enableShellIntegration = true;
+    };
+  };
+
+  programs.tmux = {
+    enable = true;
+    prefix = "C-a";
+    clock24 = true;
+    sensibleOnTop = false;
+    shell = "\\${pkgs.zsh}/bin/zsh";
+    terminal = "screen-256color";
+    customPaneNavigationAndResize = true;
+    mouse = true;
+    newSession = true;
+    keyMode = "vi";
+    plugins = with pkgs; [
+      tmuxPlugins.vim-tmux-navigator
+      tmuxPlugins.tmux-fzf
+      {
+        plugin = tmuxPlugins.power-theme;
+        extraConfig = ''
+          set -g @tmux_power_theme 'moon'
+        '';
+      }
+      {
+        plugin = tmuxPlugins.resurrect;
+        extraConfig = ''
+          set -g @resurrect-capture-pane-contens 'on'
+        '';
+      }
+      {
+        plugin = tmuxPlugins.continuum;
+        extraConfig = ''
+          set -g @continuum-restore 'on'
+        '';
+      }
+    ];
+    extraConfig = ''
+      unbind %
+      bind | split-window -h
+      unbind '"'
+      bind - split-window -v
+
+      bind r source-file ~/.config/tmux/tmux.conf \; display "Reloaded!"
+
+      bind -r m resize-pane -Z
+
+      bind-key -T copy-mode-vi 'v' send -X begin-selection
+      bind-key -T copy-mode-vi 'y' send -X copy-selection
+
+      unbind -T copy-mode-vi MouseDragEnd1Pane
+    '';
   };
 
   programs.eww = {

@@ -80,8 +80,8 @@ in {
         inactive_opacity = 1.0;
         blur = {
           enabled = true;
-          size = 10;
-          passes = 3;
+          size = 3;
+          passes = 5;
           new_optimizations = true;
           xray = false;
           ignore_opacity = true;
