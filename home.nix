@@ -91,6 +91,7 @@ in {
 
     ripgrep
     fd
+    tlrc
     sl
     zsh-fzf-tab
 
