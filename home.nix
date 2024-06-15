@@ -181,6 +181,7 @@ in {
       cd = "z";
       ls = "eza";
       rm = "trash -c always put";
+      cat = "bat";
     };
 
     oh-my-zsh = {
