@@ -87,7 +87,9 @@ in {
     cava
     hyprpicker
     mpv
+
     bc
+    (import ./derivations/battery-health.nix {inherit pkgs;})
 
     ripgrep
     fd
