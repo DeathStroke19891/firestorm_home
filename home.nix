@@ -87,6 +87,7 @@ in {
     cava
     hyprpicker
     mpv
+    bc
 
     ripgrep
     fd
