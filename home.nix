@@ -72,7 +72,6 @@ in {
     (import ./derivations/screenshot.nix {inherit pkgs;})
     mako
     kooha
-    # (import ./derivations/recorder.nix {inherit pkgs;})
     rofi-wayland
     wl-clipboard
     swww
