@@ -163,7 +163,7 @@ in {
         ", XF86AudioLowerVolume, exec, pulsemixer --change-volume -5"
         ", XF86AudioMute, exec, pulsemixer --toggle-mute"
         ", Print, exec, screenshot"
-        ", XF86AudioPlay, exec, record"
+        ", XF86AudioPlay, exec, kooha"
         ", XF86AudioNext, exec, $HOME/shell-scripts/change-wallpaper.sh"
         ", XF86AudioPrev, exec, hyprshade toggle"
         ", XF86Presentation,exec, $HOME/shell-scripts/change-wallpaper.sh"
