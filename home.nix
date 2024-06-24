@@ -347,4 +347,11 @@ in {
     iconTheme.package = pkgs.candy-icons;
     iconTheme.name = "candy-icons";
   };
+
+  dconf.settings = {
+    "org/virt-manager/virt-manager/connections" = {
+      autoconnect = ["qemu:///system"];
+      uris = ["qemu:///system"];
+    };
+  };
 }
