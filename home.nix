@@ -87,6 +87,7 @@ in {
     cava
     hyprpicker
     mpv
+    wl-mirror
 
     bc
     (import ./derivations/battery-health.nix {inherit pkgs;})
@@ -118,6 +119,8 @@ in {
     jq
     socat
     hck
+
+    go
 
     emacs
     neovim

@@ -156,6 +156,7 @@ in {
         "$mainMod, S, exec, sioyek"
         "$mainMod, Z, exec, zathura"
         "$mainMod SHIFT, P, exec, pass-show"
+        "$mainMod SHIFT, U, focusmonitor, HDMI-A-1"
 
         ", XF86MonBrightnessUp, exec,light -A 5"
         ", XF86MonBrightnessDown, exec, light -U 5"
