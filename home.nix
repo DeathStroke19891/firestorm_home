@@ -56,11 +56,6 @@ in {
 
     nur.repos.nltch.spotify-adblock
 
-    # stable-pkgs.steam
-    # stable-pkgs.steam-run
-    # stable-pkgs.steamPackages.steamcmd
-    # inputs.steam-tui.packages."${pkgs.system}".steam-tui
-
     alejandra
 
     floorp
@@ -120,8 +115,6 @@ in {
     socat
     hck
 
-    go
-
     emacs
     neovim
     obsidian
@@ -134,6 +127,8 @@ in {
 
     catppuccin-qt5ct
     cinnamon.nemo-with-extensions
+    yazi
+    ueberzugpp
 
     texliveFull
 
