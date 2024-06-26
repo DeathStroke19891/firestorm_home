@@ -147,7 +147,7 @@ in {
 
       bind = [
         "$mainMod, RETURN, exec, alacritty"
-        "$mainMod, E, exec, nemo"
+        "$mainMod, E, exec, alacritty -e yazi"
         "$mainMod, F, exec, floorp"
         "$mainMod SHIFT, F, exec, floorp -P College"
         "$mainMod, D, exec, emacsclient -c -a 'emacs'"
