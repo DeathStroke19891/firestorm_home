@@ -130,6 +130,8 @@ in {
     yazi
     ueberzugpp
 
+    lorien
+
     texliveFull
 
     noto-fonts-emoji
