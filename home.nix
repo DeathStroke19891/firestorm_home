@@ -132,6 +132,7 @@ in {
 
     lorien
     pandoc
+    protonvpn-cli_2
 
     texliveFull
 
