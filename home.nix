@@ -109,7 +109,7 @@ in {
     transmission-qt
     gimp
     planify
-    foliate
+    bookworm
 
     jq
     socat
@@ -131,6 +131,7 @@ in {
     ueberzugpp
 
     lorien
+    pandoc
 
     texliveFull
 
