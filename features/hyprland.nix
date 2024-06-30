@@ -126,7 +126,7 @@ in {
       };
 
       master = {
-        new_is_master = false;
+        new_status = "master";
         new_on_top = true;
         no_gaps_when_only = false;
         always_center_master = false;
